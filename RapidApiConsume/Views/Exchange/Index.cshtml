@@ -1,0 +1,20 @@
+﻿@model List<ExchangeViewModel.Exchange_Rates>
+@{
+    Layout = null;
+}
+<div class="container">
+    <table class="table table-bordered">
+    <tr>
+        <th>Kur</th>
+        <th>Döviz</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.currency</td>
+            <td>@item.exchange_rate_buy</td>
+        </tr>
+    }
+    </table>
+</div>
+

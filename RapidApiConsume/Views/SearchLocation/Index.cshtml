@@ -1,0 +1,25 @@
+﻿@model List<SearchLocationViewModel>
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    <br />
+    <br />
+    @using (Html.BeginForm("Index", "SearchLocation", FormMethod.Post))
+    {
+        <label>Şehir Adını Giriniz</label>
+        <input type="text" class="form-control" name="city"/>
+        <br />
+        <button class="btn btn-dark">Şehir Destinasyon ID getir</button>
+    }
+    <hr />
+    <table class="table table-hover">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.dest_id</td>
+            </tr>
+        }
+    </table>
+</div>
