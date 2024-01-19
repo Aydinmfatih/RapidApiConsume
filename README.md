@@ -16,3 +16,16 @@ Bu proje, C# MVC kullanılarak geliştirilmiş bir uygulamadır. IMDb'den top 10
 ![Ekran görüntüsü 2024-01-20 011012](https://github.com/Aydinmfatih/RapidApiConsume/assets/46519508/838dce53-fb28-431d-95fa-c7e24281bba0)
 ![Ekran görüntüsü 2024-01-20 010921](https://github.com/Aydinmfatih/RapidApiConsume/assets/46519508/ca44fcbd-dc0d-4e19-9ca7-409ee34c7a0b)
 ![Ekran görüntüsü 2024-01-20 011057](https://github.com/Aydinmfatih/RapidApiConsume/assets/46519508/05f6401d-7892-452d-9d1a-2bd50871f8e5)
+
+## Nasıl Başlamalı?
+Projeyi kendi bilgisayarınıza klonlamak ve çalıştırmak için aşağıdaki adımları takip edebilirsiniz:
+
+1. Projeyi GitHub reposundan klonlayın.
+2. Visual Studio veya tercih ettiğiniz başka bir IDE ile projeyi açın.
+3. Projedeki bağımlılıkları yüklemek için NuGet paket yöneticisini kullanın.
+4. SQL Server bağlantı ayarlarınıza göre appsettings.json dosyasını düzenleyin.
+5. Projeyi çalıştırın ve tarayıcınızda sonuçları gözlemleyin.
+## Katkıda Bulunma
+Eğer projeye katkıda bulunmak isterseniz, lütfen bir çatal oluşturun (fork) ve geliştirmelerinizi bir dal (branch) üzerinde yapın. Daha sonra bir çekme talebi (pull request) oluşturarak değişikliklerinizi paylaşabilirsiniz.
+
+Bu projeyi geliştirmek için her türlü katkıya açığım!
