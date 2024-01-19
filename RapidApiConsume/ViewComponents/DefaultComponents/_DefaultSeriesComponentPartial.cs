@@ -2,31 +2,34 @@
 using Newtonsoft.Json;
 using RapidApiConsume.Models;
 
-namespace RapidApiConsume.Controllers
+namespace RapidApiConsume.ViewComponents.DefaultComponents
 {
-    public class WeatherController : Controller
+    public class _DefaultSeriesComponentPartial:ViewComponent
     {
-        public async Task<IActionResult> Index()
+
+        public async Task<IViewComponentResult> InvokeAsync()
         {
             var client = new HttpClient();
+            ViewBag.t1 = "IMDB Dizi Listesi";
+            ViewBag.t2 = "Anasayfa/Imbd";
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri("https://yahoo-weather5.p.rapidapi.com/weather?location=ankara&format=json&u=c"),
+                RequestUri = new Uri("https://imdb-top-100-movies.p.rapidapi.com/series/"),
                 Headers =
     {
         { "X-RapidAPI-Key", "e377acc97emsh8b49d7ff2f70369p1d60f2jsn2c2b95aa1ebb" },
-        { "X-RapidAPI-Host", "yahoo-weather5.p.rapidapi.com" },
+        { "X-RapidAPI-Host", "imdb-top-100-movies.p.rapidapi.com" },
     },
             };
             using (var response = await client.SendAsync(request))
             {
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<WeatherViewModel>(body);
-                return View(values.locations.ToList());
+                var values = JsonConvert.DeserializeObject<List<SeriesViewModel>>(body).Take(5).ToList();
+                return View(values);
             }
-          
         }
     }
 }
+

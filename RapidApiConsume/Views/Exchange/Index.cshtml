@@ -1,20 +1,42 @@
 ﻿@model List<ExchangeViewModel.Exchange_Rates>
 @{
-    Layout = null;
+    Layout = "~/Views/UI/Index.cshtml";
 }
-<div class="container">
-    <table class="table table-bordered">
-    <tr>
-        <th>Kur</th>
-        <th>Döviz</th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.currency</td>
-            <td>@item.exchange_rate_buy</td>
-        </tr>
-    }
-    </table>
+<div style="padding-top: 20px;" class="container">
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Kur</th>
+                    <th scope="col">Döviz</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.currency</td>
+                        <td>@item.exchange_rate_buy</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <span class="page-link">Önceki</span>
+            </li>
+            <li class="page-item active" aria-current="page">
+                <span class="page-link">1 <span class="sr-only">(current)</span></span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Sonraki</a>
+            </li>
+        </ul>
+    </nav>
 </div>
+
 

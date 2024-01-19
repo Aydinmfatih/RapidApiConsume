@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UI/Index.cshtml";
+}
+
+<div class="container-fluid py-5 mt-5">
+    <div class="container py-5">
+        <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
+            <h5 class="text-primary">Otel Rezervasyonu</h5>
+            <h1 class="mb-3">İstediğiniz Oteli Rezerve Edin</h1>
+        </div>
+        <div class="contact-detail position-relative p-5">
+            <div class="row g-5 mb-5 justify-content-center">
+                <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".3s">
+                    <div class="d-flex bg-light p-3 rounded">
+                        <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h4 class="text-primary">Adres</h4>
+                            <a href="https://goo.gl/maps/Zd4BCynmTb98ivUJ6" target="_blank" class="h5">İstanbul/Ümraniye</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".5s">
+                    <div class="d-flex bg-light p-3 rounded">
+                        <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+                            <i class="fa fa-phone text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h4 class="text-primary">Bizi Arayın</h4>
+                            <a class="h5" href="tel:+0123456789" target="_blank">+90 (533) 333 3333</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".7s">
+                    <div class="d-flex bg-light p-3 rounded">
+                        <div class="flex-shrink-0 btn-square bg-secondary rounded-circle" style="width: 64px; height: 64px;">
+                            <i class="fa fa-envelope text-white"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h4 class="text-primary">Email</h4>
+                            <a class="h5" href="mailto:info@example.com" target="_blank">info@example.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5">
+                <form method="get" asp-action="GetFilteredHotels" asp-controller="Booking">
+                    <div class="col-lg-12 wow fadeIn" data-wow-delay=".5s">
+                        <div class="p-5 rounded contact-form">
+                            <div class="mb-4">
+                                <label>Şehir giriniz</label>
+                                <input type="text" class="form-control border-0 py-3" name="city" placeholder="Şehir">
+                            </div>
+                            <div class="mb-4">
+                                <label for="inputCheckIn" class="form-label">Giriş Tarihi Giriniz</label>
+                                <input type="date" name="checkInDate" id="inputCheckIn" class="form-control border-0 py-3">
+                            </div>
+                            <div class="mb-4">
+                                <label for="inputCheckOut" class="form-label">Çıkış Tarihi Giriniz</label>
+                                <input type="date" id="inputCheckOut" name="checkOutDate" class="form-control border-0 py-3">
+                            </div>
+                            <div class="mb-4">
+                                <label>Kişi sayısı giriniz</label>
+                                <input type="text" name="personCount" class="form-control border-0 py-3" placeholder="Kişi Sayısı">
+                            </div>
+                            <div class="mb-4">
+                                <label>Oda sayısı giriniz</label>
+                                <input type="text" name="roomCount" class="form-control border-0 py-3" placeholder="Oda Sayısı">
+                            </div>
+
+                            <div class="text-start">
+                                <button class="btn bg-primary text-white py-3 px-5" type="submit">Getir</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

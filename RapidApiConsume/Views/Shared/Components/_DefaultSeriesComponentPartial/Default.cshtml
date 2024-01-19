@@ -1,14 +1,10 @@
 ﻿@model List<SeriesViewModel>
-@{
-    Layout = "~/Views/UI/Index.cshtml";
-}
 <!DOCTYPE html>
-
 <div class="container-fluid blog py-5 my-5">
     <div class="container py-5">
         <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
-            <h5 class="text-primary">IMDB Dizi Listesi</h5>
-            <h1>IMDB Top 100 Dizi</h1>
+            <h5 class="text-primary">En yüksek puanı alanlar</h5>
+            <h1>IMDB En İyi Puan Alan 5 Dizi</h1>
         </div>
         <div class="row g-5 justify-content-center">
             @foreach (var item in Model)
@@ -25,7 +21,7 @@
                     </div>
                 </div>
             }
-          
+
         </div>
     </div>
 </div>
